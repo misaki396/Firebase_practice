@@ -27,7 +27,8 @@
 /public/assets
 .byebug_history
 
-/app/assets/javascripts/initialize.js
+/app/assets/javascripts
+.initialize.js
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
