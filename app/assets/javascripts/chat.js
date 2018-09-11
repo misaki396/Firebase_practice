@@ -5,6 +5,7 @@ $(function(){
     ref.on('child_added', function (childSnapshot) {
         var chatmsg = $('<div></div>').text(childSnapshot.val().content);
         $('#chat').append(chatmsg);
+
         console.log('Firebaseからの読み込み');
     });
 

@@ -12,6 +12,16 @@ $(function(){
         }
     });
 
+    $('#facebooklogin').click(function(){
+        var provider = new firebase.auth.FacebookAuthProvider();
+
+        firebase.auth().signInWithRedirect(provider).then(function(result) {
+            location.reload();
+        }).catch(function(error) {
+            console.log(error)
+            alert('ログイン失敗')
+        });
+    });
 
     $('#gmaillogin').click(function(){
         var provider = new firebase.auth.GoogleAuthProvider();
@@ -50,3 +60,5 @@ $(function(){
         });
     });
 });
+
+
